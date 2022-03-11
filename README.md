@@ -12,11 +12,11 @@ A simple AWS Service Catalog demo product that can be used to "order" an S3 buck
 
 # lib_s3_demo
 
-Deploying an AWS Service Catalog product with Terraform (however, due to the current immature support in Terraform, this is not recommended).
+Provisioning an AWS Service Catalog product with Terraform (however, due to the current immature support in Terraform, this is not recommended).
 
 # lib_s3_demo_cf
 
-Deploying an AWS Service Catalog product using CloudFormation (provided "as is" - this was not the focus of this POC).
+Provisioning an AWS Service Catalog product using CloudFormation (provided "as is" - this was not the focus of this POC).
 
 # Issues
 
