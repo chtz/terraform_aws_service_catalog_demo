@@ -20,6 +20,6 @@ Provisioning an AWS Service Catalog product using CloudFormation (provided "as i
 
 # Issues
 
-## Service Catalog not yet fully supported in terraform (=> ugly workarounds required)
+Service Catalog not yet fully supported in terraform (=> ugly workarounds required)
 
 see https://github.com/hashicorp/terraform-provider-aws/issues/20024 
