@@ -1,0 +1,40 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "foo",
+    "Parameters": {
+        "BucketName": {
+            "Type": "String",
+            "Description": "S3 bucket name"
+        },
+        "FooTagValue": {
+            "Type": "String",
+            "Description": "Value of the foo tag"
+        }
+    },
+    "Resources": {
+        "Bucket": {
+            "Type": "AWS::S3::Bucket",
+            "Properties": {
+                "BucketName": {
+                    "Ref": "BucketName"
+                },
+                "Tags": [
+                    {
+                        "Key": "foo",
+                        "Value": {
+                            "Ref": "FooTagValue"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "Outputs": {
+        "Bucket": {
+            "Description": "S3 bucket name",
+            "Value": {
+                "Ref": "Bucket"
+            }
+        }
+    }
+}

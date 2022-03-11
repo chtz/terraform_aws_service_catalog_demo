@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: A sample template
+Resources:
+  MyBucket: 
+    Type: "AWS::ServiceCatalog::CloudFormationProvisionedProduct"
+    Properties: 
+      ProductName: libs3-product
+      ProvisioningArtifactName: libs3-v1
+      ProvisioningParameters:
+        - Key: BucketName
+          Value: chtzdemo123cffo2002189208
+        - Key: FooTagValue
+          Value: CF
+Outputs:
+  ProductId:
+    Value: !Ref MyBucket
+  CloudformationStackArn:
+    Value: !GetAtt MyBucket.CloudformationStackArn
+  BucketName:
+    Value: !GetAtt MyBucket.Outputs.Bucket
